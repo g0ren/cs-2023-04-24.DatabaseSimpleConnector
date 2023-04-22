@@ -25,7 +25,7 @@ namespace DataBaseTest
                 {
                     Console.WriteLine(e.Message);
                 }
-                return new string[] { "" };
+                return new string[] { };
             }
         }
         static async Task ListCharacters()
