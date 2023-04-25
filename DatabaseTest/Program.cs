@@ -33,7 +33,7 @@ namespace DataBaseTest
             string query =
                 @"SELECT c.NAME AS ""Character Name"", cc.NAME AS ""Class Name"" " +
                 "FROM Characters AS c, CharactersClass AS cc " +
-                "WHERE c.CharacterClassId = cc.Id;";
+                "WHERE c.CharactersClassId = cc.Id;";
             string[] response = await MakeQuery(query);
             foreach (var line in response)
             {
@@ -60,8 +60,8 @@ namespace DataBaseTest
                 );
             }
             _ = await MakeQuery(
-                "INSERT INTO Characters(Name, CharacterClassId) " +
-                @"VALUES (""" +name + @""", " + $"{currentClass[0]});"
+                "INSERT INTO Characters(Name, CharactersClassId) " +
+                @"VALUES (""" + name + @""", " + $"{currentClass[0]});"
                 );
             
         }
